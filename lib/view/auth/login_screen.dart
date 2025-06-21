@@ -75,11 +75,17 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                           );
                         } else {
-                          //snackbar for password wrong
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(content: Text("Wrong Password")),
+                          );
                         }
-
                         log(user.name.toString());
                       } else {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text("User Doesn't Exists"),
+                          ),
+                        );
                         //snackbar for user not exists
                       }
                     },
