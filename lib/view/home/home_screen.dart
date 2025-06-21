@@ -8,6 +8,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Home page"),
+        centerTitle: true,
+        backgroundColor: Colors.blue,
+      ),
       body: SafeArea(
         child: Consumer<UserProvider>(builder: (context, userConsumer, child) {
           return ListView.builder(
